@@ -1,0 +1,92 @@
+<style>
+       
+#custom-alert {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    font-family: Arial;
+    display: none;
+    
+    border-radius: 10px;
+  
+}
+
+
+        
+        #custom-alert .notification {
+            position: relative;
+            display: inline-block;
+        }
+
+        
+        #custom-alert .badge {
+            background: #DC2626;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -20px;
+            right: -30px;
+        }
+
+        
+        #custom-alert .content {
+            margin-left: 0px;
+            display: inline-block;
+        }
+
+     
+        #custom-alert .title {
+            font-weight: bold;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Changa', sans-serif;
+        }
+    </style>
+
+<div id="custom-alert">
+
+        <a class="notification" href="https://www.tun24t.com/2023/11/blog-post_74.html">
+
+            <div class="badge">
+
+              <span style="font-family: Changa; font-size: medium;"><b>1</b></span>
+
+            </div>
+
+            <div class="content">
+
+                <div class="title" style="text-align: center;"><span style="font-family: Changa; font-size: medium;"><b>خبر عاجل</b></span></div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.location === window.parent.location) {
+                let alert = document.querySelector('#custom-alert');
+                let colors = ['#DC2626', '#0077B6', '#00A7E1']; // 'D#DH'F 'D*J *1J/ *:JJ1G'
+                let colorIndex = 0;
+
+                setInterval(() => {
+                    alert.style.background = colors[colorIndex];
+                    colorIndex = (colorIndex + 1) % colors.length;
+                }, 2000); // *:JJ1 'DDHF CD 2 +'FJ)
+                setTimeout(() => {
+                    alert.style.display = 'block';
+                }, 5000);
+            }
+        });
+    </script>
